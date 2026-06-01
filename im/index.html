@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dream Bag & Heel • Élégance à chaque pas</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+    }
+
+    /* Hero - Photo pure avec texte au milieu */
+    .hero {
+      position: relative;
+      height: 68vh;
+      min-height: 540px;
+      max-height: 740px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    /* Overlay très léger pour lisibilité du texte */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.32);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      max-width: 920px;
+      padding: 2rem;
+    }
+
+    .hero-content h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(4.5rem, 10vw, 8rem);
+      font-weight: 700;
+      letter-spacing: -3px;
+      text-shadow: 0 6px 30px rgba(0, 0, 0, 0.85);
+      margin-bottom: 1.2rem;
+      line-height: 1.05;
+    }
+
+    .hero-content .slogan {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(1.6rem, 4.5vw, 2.4rem);
+      letter-spacing: 6px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-hero {
+      background: #d4a5b0;
+      color: white;
+      padding: 16px 50px;
+      border-radius: 9999px;
+      font-size: 1.15rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.4s ease;
+    }
+
+    .btn-hero:hover {
+      background: #c47a8e;
+      transform: scale(1.07);
+    }
+
+    /* Section Catégories (images qui bougent) */
+    .categories-container {
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 30px 0;
+      background: #f8f1f3;
+    }
+
+    .categories-scroll {
+      display: inline-flex;
+      gap: 24px;
+      animation: scrollHorizontal 28s linear infinite;
+    }
+
+    .categories-scroll:hover {
+      animation-play-state: paused;
+    }
+
+    .category-card {
+      width: 290px;
+      flex-shrink: 0;
+      border-radius: 28px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+      transition: all 0.5s ease;
+    }
+
+    .category-card:hover {
+      transform: scale(1.08) translateY(-10px);
+    }
+
+    .category-card img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+    }
+
+    .category-label {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.75);
+      color: white;
+      padding: 10px 28px;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+
+    @keyframes scrollHorizontal {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Bannière promo -->
+  <div class="bg-black text-white text-center py-3 text-sm font-medium tracking-wide">
+    PROMO SPÉCIALE : -20% sur tous les Mocassins • Livraison gratuite dès 200€
+  </div>
+
+ 
+ <!-- HERO - Photo pure avec texte centré -->
+<section class="hero">
+  <img src="C:\Users\utech\Downloads\combined_horizontal.jpg" alt="Dream Bag & Heel">   <!-- Change ici si besoin -->
+
+  <div class="hero-overlay"></div>
+  
+  <div class="hero-content">
+    <h1>𝓓𝓻𝒆𝓪𝓶 ℬ𝓪𝓰 & ℋ𝒆𝒆𝓵</h1>
+    <p class="slogan">𝓣𝓮𝓷𝓭𝓪𝓷𝓬𝓮 • 𝓔́𝓵𝓮́𝓰𝓪𝓷𝓬𝓮 • 𝓒𝓸𝓷𝓯𝓸𝓻𝓽</p>
+    
+    <!-- Lien vers la page des produits -->
+    <a href="produits.html" class="btn-hero">
+      Découvrir la Collection
+    </a>
+  </div>
+</section>
+  <!-- SECTION CATÉGORIES avec mouvement parallèle -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-pink-700 mb-12">𝒟𝑒́𝒸𝑜𝓊𝓋𝓇𝑒𝓏 𝓃𝑜𝓈 𝓂𝒶𝓇𝓆𝓊𝑒𝓈</h2>
+      
+      <div class="categories-container">
+        <div class="categories-scroll">
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image4.jpg" alt="Ensemble coordonné beige">
+            <div class="category-label">écru</div>
+          </div>
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image3.jpg" alt="Chaussures">
+            <div class="category-label">Miu Miu</div>
+          </div>
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image2.jpg"alt="Ensembles">
+            <div class="category-label"> Chanel</div>
+          </div>
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image1.jpg" alt="Accessoires">
+            <div class="category-label">glamour bordeaux</div>
+          </div>
+
+          <!-- Duplication pour boucle infinie -->
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image5.jpg" alt="Sacs">
+            <div class="category-label">louis vuitton</div>
+          </div>
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image6.png" alt="Chaussures">
+            <div class="category-label">dior</div>
+          </div>
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image7.jpg"alt="Ensembles">
+            <div class="category-label">celine</div>
+          </div>
+          <div class="category-card">
+            <img src="C:\Users\utech\OneDrive\Desktop\image2\image8.jpg" alt="Accessoires">
+            <div class="category-label">COACH</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12 text-center">
+    <p class="text-3xl font-bold tracking-widest">Dream Bag & Heel</p>
+    <p class="mt-3 text-gray-400">Tendance • Élégance • Confort</p>
+    <p class="text-sm text-gray-500 mt-8">© 2026 Dream Bag & Heel - Tous droits réservés</p>
+  </footer>
+
+  <script>
+    function toggleWishlist() { alert("❤️ Liste de souhaits"); }
+    function toggleAccount() { alert("👤 Mon compte"); }
+    function toggleCart() { alert("🛍️ Panier (3 articles)"); }
+  </script>
+
+</body>
+</html>

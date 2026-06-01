@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collection - Dream Bag & Heel</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: white;
+      padding: 15px 5%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 28px; font-weight: bold; color: #e91e63; }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+      background: white;
+      border-bottom: 1px solid #eee;
+    }
+    nav a {
+      padding: 10px 18px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+    nav a:hover, nav a.active {
+      background: #e91e63;
+      color: white;
+    }
+
+    .products-container {
+      max-width: 1300px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #e91e63;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 25px rgba(233, 30, 99, 0.15);
+    }
+    .product-card img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    .product-info {
+      padding: 15px;
+      text-align: center;
+    }
+    .product-info h4 {
+      margin: 8px 0;
+      font-size: 1.1rem;
+    }
+    .price {
+      color: #e91e63;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Dream Bag & Heel</div>
+  </header>
+
+  <nav id="categoryNav">
+    <!-- Généré par JavaScript -->
+  </nav>
+
+  <div class="products-container">
+    <h1 id="categoryTitle">Toutes les Produits</h1>
+    <div class="products-grid" id="productsGrid">
+      <!-- Les 12 produits par catégorie seront affichés ici -->
+    </div>
+  </div>
+
+  <script>
+    // Données des catégories avec 12 produits chacune
+    const categoriesData = {
+      "Toutes": { title: "Toutes les Produits", products: [] },
+      "Sac Épaule": { 
+        title: "Sac Épaule",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Sac Épaule Élégant ${i+1}`,
+          img: `https://picsum.photos/id/${200 + i}/400/300`,
+          price: "89,90 €"
+        }))
+      },
+      "Sac Bandoulière": { 
+        title: "Sac Bandoulière",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Sac Bandoulière Luxe ${i+1}`,
+          img: `https://picsum.photos/id/${220 + i}/400/300`,
+          price: "79,90 €"
+        }))
+      },
+      "Sac à Dos": { 
+        title: "Sac à Dos",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Sac à Dos Chic ${i+1}`,
+          img: `https://picsum.photos/id/${240 + i}/400/300`,
+          price: "95,00 €"
+        }))
+      },
+      "Portefeuille": { 
+        title: "Portefeuille",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Portefeuille Cuir ${i+1}`,
+          img: `https://picsum.photos/id/${260 + i}/400/300`,
+          price: "45,90 €"
+        }))
+      },
+      "Ballerines": { 
+        title: "Ballerines",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Ballerines Confort ${i+1}`,
+          img: `https://picsum.photos/id/${280 + i}/400/300`,
+          price: "65,00 €"
+        }))
+      },
+      "Escarpin": { 
+        title: "Escarpin",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Escarpin Classique ${i+1}`,
+          img: `https://picsum.photos/id/${300 + i}/400/300`,
+          price: "120,00 €"
+        }))
+      },
+      "Mocassins": { 
+        title: "Mocassins",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Mocassins Cuir ${i+1}`,
+          img: `https://picsum.photos/id/${320 + i}/400/300`,
+          price: "85,90 €"
+        }))
+      },
+      "Sandales": { 
+        title: "Sandales",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Sandales Élégantes ${i+1}`,
+          img: `https://picsum.photos/id/${340 + i}/400/300`,
+          price: "59,90 €"
+        }))
+      },
+      "Baskets": { 
+        title: "Baskets",
+        products: Array(12).fill().map((_, i) => ({
+          name: `Baskets Tendance ${i+1}`,
+          img: `https://picsum.photos/id/${360 + i}/400/300`,
+          price: "110,00 €"
+        }))
+      }
+    };
+
+    const nav = document.getElementById('categoryNav');
+    const grid = document.getElementById('productsGrid');
+    const title = document.getElementById('categoryTitle');
+
+    // Création des boutons de catégories
+    Object.keys(categoriesData).forEach(cat => {
+      if (cat === "Toutes") return;
+      const a = document.createElement('a');
+      a.href = "#";
+      a.textContent = cat;
+      a.onclick = () => showCategory(cat);
+      nav.appendChild(a);
+    });
+
+    // Fonction pour afficher les produits d'une catégorie
+    function showCategory(category) {
+      // Supprimer la classe active de tous
+      document.querySelectorAll('#categoryNav a').forEach(link => {
+        link.classList.remove('active');
+        if (link.textContent === category) link.classList.add('active');
+      });
+
+      title.textContent = categoriesData[category].title;
+
+      grid.innerHTML = ''; // Vider la grille
+
+      categoriesData[category].products.forEach(product => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.innerHTML = `
+          <img src="${product.img}" alt="${product.name}">
+          <div class="product-info">
+            <h4>${product.name}</h4>
+            <p class="price">${product.price}</p>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Afficher tous les produits au chargement (optionnel)
+    // showCategory("Toutes"); // Décommente si tu veux tout afficher au début
+    showCategory("Sac Épaule"); // Par défaut : Sac Épaule
+  </script>
+
+</body>
+</html>
