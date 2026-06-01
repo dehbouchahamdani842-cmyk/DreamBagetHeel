@@ -41,7 +41,7 @@ function showColorToast(colorHex) {
     setTimeout(() => toast.remove(), 250);
   }, 2000);
 }
-
+product.img = "im/r1.jpg";
 const categoriesData = {
   "Nouveauté": {
     title: "𝓝𝓸𝓾𝓿𝓮𝓪𝓾𝓽é 𝓹𝓻𝓮𝓶𝓲𝓾𝓶 𝓹𝓸𝓾𝓻 𝓾𝓷𝓮 𝓪𝓵𝓵𝓾𝓻𝓮 𝓻𝓪𝓯𝓯𝓲𝓷é𝓮",
