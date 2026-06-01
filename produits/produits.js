@@ -46,9 +46,9 @@ const categoriesData = {
   "Nouveauté": {
     title: "𝓝𝓸𝓾𝓿𝓮𝓪𝓾𝓽é 𝓹𝓻𝓮𝓶𝓲𝓾𝓶 𝓹𝓸𝓾𝓻 𝓾𝓷𝓮 𝓪𝓵𝓵𝓾𝓻𝓮 𝓻𝓪𝓯𝓯𝓲𝓷é𝓮",
     products: [
-      { name: "Ensemble sac et chaussures élégant et harmonieux", img: "../../im/r1.jpg", price: "60,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
-      { name: "Duo chic pour un look parfaitement coordonné", img: "../../im/r2.jpg", price: "70,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
-      { name: "Ensemble raffiné avec finition haut de gamme", img: "../../im/r3.jpg", price: "55,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
+      { name: "Ensemble sac et chaussures élégant et harmonieux", img: "im/r1.jpg", price: "60,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
+      { name: "Duo chic pour un look parfaitement coordonné", img: "/im/r2.jpg", price: "70,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
+      { name: "Ensemble raffiné avec finition haut de gamme", img: "/im/r3.jpg", price: "55,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
       { name: "L'accord parfait entre style et luxe", img: "../../im/r4.jpg", price: "50,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
       { name: "Le choix idéal pour une tenue élégante", img: "../../im/r5.jpg", price: "67,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
       { name: "Ensemble avec détails soignés et matériaux de qualité", img: "../../im/r6.jpg", price: "100,90 €", sizes: ["Unique"], colors: ["#000000", "#8B4513", "#191970"] },
